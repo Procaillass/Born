@@ -45,9 +45,15 @@ document.querySelector('#login-form').addEventListener("submit", function(e){
            document.querySelector('#login-form').classList.toggle('hidden')
            document.querySelector('#entree-form').classList.remove('hidden')
 
+           let UrlWp = "https://www.wannabedev.be/Born/Integre/wp-json"
+           axios.get(UrlWp)
+           .then ((response) => {
+            console.log(response)
+           })
+
            let entreeTitle =  document.getElementById("entreeTitle")
 
-           entreeTitle.innerHTML = "Bonjour " + userPrenom + " " + userNom + ", choisissez l'objet de votre venue."; 
+           entreeTitle.innerHTML = "Bonjour " + userPrenom + " " + userNom + ", choisissez l'objet de votre venue."
 
 
            document.getElementById('radioFormation').addEventListener("click", function() {
@@ -59,6 +65,45 @@ document.querySelector('#login-form').addEventListener("submit", function(e){
             document.querySelector('#formations').classList.add('hidden')
             document.querySelector('#personnels').classList.remove('hidden')
            } )
+
+           document.querySelector('#entree-form').addEventListener("submit", function(e){
+            e.preventDefault()
+
+            document.querySelector('#entree-form').classList.add('hidden')
+            document.querySelector('#response-form').classList.remove('hidden')
+
+            let ladate = new Date()                
+            let dateEntree = (ladate.getDate()+"/"+(ladate.getMonth()+1)+"/"+ladate.getFullYear())
+
+            axios.put(UrlQ2, {
+                "Nom" : document.querySelector('#Nom').value,
+                "Prenom" : document.querySelector('#Prenom').value,
+                "Email" : document.querySelector('#Email').value,
+                "DateEntree" : dateEntree
+            })
+
+            let etiquetteNom =  document.getElementById("etiquetteNom")
+            etiquetteNom.innerHTML = userNom + " " + userPrenom
+
+            let etiquetteEmail =  document.getElementById("etiquetteEmail")
+            etiquetteEmail.innerHTML = userEmail
+
+            let etiquetteDate =  document.getElementById("etiquetteDate")
+            etiquetteDate.innerHTML = "Date de la dernière entrée : " + dateEntree
+
+
+
+            
+
+
+
+            
+
+
+
+            })
+
+
 
      
     })

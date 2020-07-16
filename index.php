@@ -21,20 +21,22 @@
     </header>
     <main>
         <form class="box columns is-desktop" id="login-form" action="entree.php">
-            <div class="column is-half is-offset-one-quarter"> 
+            <div class="column is-half is-offset-one-quarter">
 
                 <label for="Nom">Nom :</label>
                 <input id="Nom" name="Nom" class="input is-primary" type="text" placeholder="inscrivez votre nom">
 
                 <label for="Prenom">Prénom :</label>
-                <input id="Prenom" name="Prenom" class="input is-primary" type="text" placeholder="inscrivez votre prénom">
+                <input id="Prenom" name="Prenom" class="input is-primary" type="text"
+                    placeholder="inscrivez votre prénom">
 
                 <label for="Email">E-mail :</label>
-                <input id="Email" name="Email" class="input is-primary" type="email" placeholder="Inscrivez votre e-mail">
+                <input id="Email" name="Email" class="input is-primary" type="email"
+                    placeholder="Inscrivez votre e-mail">
 
                 <p>Remplir les champs, ouvrir la console et appuyer sur étape suivante.</p>
 
-                <button type="submit" class="button">étape suivante</button>
+                <button id="etape-1" type="submit" class="button">étape suivante</button>
 
             </div>
 
@@ -46,13 +48,14 @@
                 <h2 class="title" id="entreeTitle">Je choisis l’objet de ma visite :</h2>
 
                 <div>
-                    <input type="radio" class="radio" id="radioFormation" name="radioChoiceEntree" value="radioFormation">
+                    <input type="radio" class="radio" id="radioFormation" name="radioChoiceEntree"
+                        value="radioFormation">
                     <label for="radioFormation">Suivre une formation</label>
                 </div>
 
                 <div id="formations" class="hidden">
                     <label for="selectFormation">Choisissez une formation :</label>
-                    <select name="formation" id="selectFormation">
+                    <select name="formation" id="selectFormatiofn">
                         <option value="">-- Faites votre selection --</option>
                         <option value="dev">Front dev</option>
                         <option value="com">Commercial</option>
@@ -62,7 +65,8 @@
 
 
                 <div>
-                    <input type="radio" class="radio" id="radioPersonnel" name="radioChoiceEntree" value="radioPersonnel">
+                    <input type="radio" class="radio" id="radioPersonnel" name="radioChoiceEntree"
+                        value="radioPersonnel">
                     <label for="radioPersonnel">Rencontrer un membre du personnel</label>
                 </div>
 
@@ -76,11 +80,28 @@
                     </select>
                 </div>
 
-                
 
-                <button type="submit" class="button">étape suivante</button>
+                <button id="etape-2" type="submit" class="button">étape suivante</button>
 
             </div>
+
+        </form>
+
+        <form id="response-form" class="box hidden" action="">
+            <h1>Merci d'avoir Utilisé la borne "Born" !</h1>
+            <p>Dirigez-vous vers le local numéro</p>
+            <h2>2</h2>
+
+            <p>Voici votre étiquette :</p>
+            <p id="etiquetteNom" class="title is-medium"></p>
+            <p id="etiquetteDate"></p>
+            <p id="etiquetteEmail"></p>
+            
+
+
+            <a class="button column is-half" href="index.php">Retour au début du formulaire</a>
+
+
 
         </form>
 
@@ -91,7 +112,7 @@
     </main>
 
     <footer>
-           
+
     </footer>
 
 

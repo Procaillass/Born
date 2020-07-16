@@ -27,3 +27,21 @@
      font-style: italic;
      text-align: center;
  }
+
+ a {
+     text-align: center;
+     margin: auto;
+ }
+
+ #response-form a {
+     padding: .5rem;
+     text-transform: none;
+     margin-top: 3rem;
+ }
+
+ #response-form h2 {
+
+    font-size: 3rem;
+    text-align: center;
+
+ }
