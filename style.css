@@ -1,0 +1,29 @@
+
+ h1 {
+     text-align: center;
+     padding: 1em;
+ }
+
+ .button {
+     width: 100%;
+     margin-top: 1rem;
+     text-transform: capitalize;
+ }
+
+ label {
+     padding-top: 1rem !important;
+     opacity: .9;
+ }
+
+ .hidden {
+     display: none !important;
+     
+ }
+
+ p {
+     font-size: .9rem;
+     opacity: .5;
+     color: rgb(0, 46, 0);
+     font-style: italic;
+     text-align: center;
+ }
