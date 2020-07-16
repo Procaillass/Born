@@ -45,3 +45,23 @@
     text-align: center;
 
  }
+
+ #qrCode {
+
+    width: 10rem;
+    opacity: .8;
+    text-align: center !important;
+    margin-right: auto !important;
+    margin-left: auto;
+
+ }
+
+ .imgQrCode  {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ /* #etiquetteNom {
+     margin: 0; */
+ 

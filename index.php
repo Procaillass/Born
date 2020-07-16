@@ -92,10 +92,16 @@
             <p>Dirigez-vous vers le local numéro</p>
             <h2>2</h2>
 
+            <div class="box">
             <p>Voici votre étiquette :</p>
             <p id="etiquetteNom" class="title is-medium"></p>
+            <div class="imgQrCode">
+            <img id="qrCode" src="https://pngimg.com/uploads/qr_code/qr_code_PNG6.png" alt="QRCODE">
+            </div>
             <p id="etiquetteDate"></p>
             <p id="etiquetteEmail"></p>
+            
+            </div>
             
 
 

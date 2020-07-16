@@ -45,11 +45,11 @@ document.querySelector('#login-form').addEventListener("submit", function(e){
            document.querySelector('#login-form').classList.toggle('hidden')
            document.querySelector('#entree-form').classList.remove('hidden')
 
-           let UrlWp = "https://www.wannabedev.be/Born/Integre/wp-json"
-           axios.get(UrlWp)
-           .then ((response) => {
-            console.log(response)
-           })
+        //    let UrlWp = "https://www.wannabedev.be/Born/Integre/wp-json"
+        //    axios.get(UrlWp)
+        //    .then ((response) => {
+        //     console.log(response)
+        //    })
 
            let entreeTitle =  document.getElementById("entreeTitle")
 
@@ -84,6 +84,9 @@ document.querySelector('#login-form').addEventListener("submit", function(e){
 
             let etiquetteNom =  document.getElementById("etiquetteNom")
             etiquetteNom.innerHTML = userNom + " " + userPrenom
+
+            // new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
+
 
             let etiquetteEmail =  document.getElementById("etiquetteEmail")
             etiquetteEmail.innerHTML = userEmail
